@@ -1,0 +1,142 @@
+#root {
+  max-width: 540px;
+}
+
+body{
+  --text-color: #494C6B;
+  --todolist-bg-color: #ffffff;
+  --bg-color: #efefef;
+  --bg-image: url('./assets/images/bg-desktop-light.jpg');
+  --h1-color: #000000;
+  background-color: var(--bg-color);
+  background-image: var(--bg-image);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  
+}
+
+body.dark-theme{
+  --text-color: #ffffff;
+  --todolist-bg-color: #25273D;
+  --bg-image: url('./assets/images/bg-desktop-dark.jpg');
+  --bg-color: #000000;
+  --h1-color: #FFFFFF;
+}
+
+ul{
+  list-style: none;
+  margin: 0px;
+}
+
+li{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 15px 24px;  
+  color: var(--text-color);
+}
+
+.icon{
+  display: block;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.light-icon{
+  background: url('./assets/icon-sun.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.dark-icon{
+  background: url('./assets/icon-moon.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.todos-controls{
+  background-color: var(--todolist-bg-color);
+  margin-top: 24px;
+}
+
+.controls, header{
+  display: flex; 
+  justify-content: space-between;
+  padding: 15px 24px;
+  color: #959595;
+  align-items: center;
+}
+.input-label{
+  display: flex;
+  align-items: center;
+}
+
+input[type=checkbox] {
+  display:none;
+}
+
+input[type=checkbox] + label{
+  background: transparent;
+  border: 0.6px solid gray;
+  height: 20px;
+  width: 20px;
+  display:inline-block;
+  padding: 0 0 0 0px;
+  border-radius: 50px 50px;
+}
+
+input[type=checkbox]:checked + label{
+  background: url(./assets/icon-check.svg), linear-gradient(90deg, rgba(85,221,255,1) 0%, rgba(192,88,243,1) 100%);;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: black;
+
+}
+
+input[type='text']{
+  background-color: transparent;
+  border: 0;
+  color: gray;
+  outline: 0px;
+  width: 350px;
+}
+
+.todo-wrapper{
+  display: flex;
+  align-items: center;
+}
+
+.todo-title{
+  padding-left: 16px;
+}
+
+.todo-input{
+  background-color: var(--todolist-bg-color);
+  text-align: left;
+  padding: 15px 24px;
+}
+
+a {
+  cursor: pointer;
+  font-weight: 500;
+  color: #959595;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #487fff;
+}
+
+
+h1 {
+  color: var(--h1-color);
+  margin: 0;
+  font-size: 3.2em;
+  line-height: 1.1;
+}
